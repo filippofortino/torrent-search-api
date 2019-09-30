@@ -1,3 +1,4 @@
+name: Monolite
 on: [push]
 
 jobs:
@@ -5,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - uses: ./.github/ # Uses an action in the root directory
+    - uses: ./.github/workflows/ # Uses an action in the root directory
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-docker-action@v1
+      uses: actions/monolite@v1
       with:
         who-to-greet: 'Grande Forti'
     # Use the output from the `hello` step
