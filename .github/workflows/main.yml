@@ -6,10 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - uses: ./.github/workflows/ # Uses an action in the root directory
     - name: Hello world action step
       id: hello
-      uses: actions/monolite@v1
+      uses: ./.github/workflows/actions/monolite@v1
       with:
         who-to-greet: 'Grande Forti'
     # Use the output from the `hello` step
